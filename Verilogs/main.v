@@ -1,4 +1,94 @@
-module JAA;
+module JAA (clk, bytecode_opcode);
+    parameter DATA_WIDTH = 8;
+    input clk;
+    input [DATA_WIDTH - 1:0] bytecode_opcode;
+
+    initial
+    	begin
+    		result = $fopen("result.txt","w");
+    	end
+    	
+    always @(posedge clk)
+        begin
+		    case(bytecode_opcode)
+		        8'b0000_0011: //iconst_0
+		            begin
+		                $fwrite(result,"%b\n", mov_instr(1, 4'b1, 11'b0));
+		                $fwrite(result,"%b\n", push_instr(16'b10));
+		            end
+		        8'b0000_0100: //iconst_1
+		            begin
+		                $fwrite(result,"%b\n", mov_instr(1, 4'b1, 11'b1));
+		                $fwrite(result,"%b\n", push_instr(16'b10));
+		            end
+		        8'b0000_0101: //iconst_2
+		            begin
+		                $fwrite(result,"%b\n", mov_instr(1, 4'b1, 11'b10));
+		                $fwrite(result,"%b\n", push_instr(16'b10));
+		            end
+		        8'b0000_0110: //iconst_3
+		            begin
+		                $fwrite(result,"%b\n", mov_instr(1, 4'b1, 11'b11));
+		                $fwrite(result,"%b\n", push_instr(16'b10));
+		            end
+		        8'b0000_0111: //iconst_4
+		            begin
+		                $fwrite(result,"%b\n", mov_instr(1, 4'b1, 11'b100));
+		                $fwrite(result,"%b\n", push_instr(16'b10));
+		            end
+		        8'b0000_1000: //iconst_5
+		            begin
+		                $fwrite(result,"%b\n", mov_instr(1, 4'b1, 11'b101));
+		                $fwrite(result,"%b\n", push_instr(16'b10));
+		            end
+		        8'b0011_1011: //istore_0
+		            begin
+		                $fwrite(result,"%b\n", pop_instr(16'b10));
+		                $fwrite(result,"%b\n", str_ldr_instr(4'b11, 4'b1, 12'b0, 1));
+		            end
+		        8'b0011_1100: //istore_1
+		            begin
+		                $fwrite(result,"%b\n", pop_instr(16'b10));
+		                $fwrite(result,"%b\n", str_ldr_instr(4'b11, 4'b1, 12'b1, 1));
+		            end
+		        8'b0011_1101: //istore_2
+		            begin
+		                $fwrite(result,"%b\n", pop_instr(16'b10));
+		                $fwrite(result,"%b\n", str_ldr_instr(4'b11, 4'b1, 12'b10, 1));
+		            end
+		        8'b0011_1110: //istore_3
+		            begin
+		                $fwrite(result,"%b\n", pop_instr(16'b10));
+		                $fwrite(result,"%b\n", str_ldr_instr(4'b11, 4'b1, 12'b11, 1));
+		            end
+		        8'b0001_1010: //iload_0
+		            begin
+		                $fwrite(result,"%b\n", str_ldr_instr(4'b11, 4'b1, 12'b0, 0));
+		                $fwrite(result,"%b\n", push_instr(16'b10));
+		            end
+		        8'b0001_1011: //iload_1
+		            begin
+		                $fwrite(result,"%b\n", str_ldr_instr(4'b11, 4'b1, 12'b1, 0));
+		                $fwrite(result,"%b\n", push_instr(16'b10));
+		            end
+		        8'b0001_1100: //iload_2
+		            begin
+		                $fwrite(result,"%b\n", str_ldr_instr(4'b11, 4'b1, 12'b10, 0));
+		                $fwrite(result,"%b\n", push_instr(16'b10));
+		            end
+		        8'b0001_1101: //iload_3
+		            begin
+		                $fwrite(result,"%b\n", str_ldr_instr(4'b11, 4'b1, 12'b11, 0));
+		                $fwrite(result,"%b\n", push_instr(16'b10));
+		            end
+		        8'b0110_0000: //iadd
+		            begin
+		                $fwrite(result,"%b\n", pop_instr(16'b110));
+		                $fwrite(result,"%b\n", add_sub_instr(0, 1, 4'b1, 4'b0, 12'b10));
+		            end
+		    endcase
+        end
+    
     function [31:0] pop_instr;
         localparam [15:0] instr_prefix = 16'b1110_1000_1011_1101;
         input [15:0] register_index;
@@ -67,94 +157,28 @@ module JAA;
         localparam [11:0] ldr_instr_prefix = 12'b1110_0101_1001;
         localparam [11:0] str_instr_prefix = 12'b1110_0101_1000;
         input [3:0] dest_reg_index, mem_addr_reg_index;
+        input [11:0] offset;
         input is_str;
         
         begin
             if(is_str)
                 str_ldr_instr = {str_instr_prefix, mem_addr_reg_index,
-                    dest_reg_index, 12'b0};
+                    dest_reg_index, offset};
             else
                 str_ldr_instr = {ldr_instr_prefix, mem_addr_reg_index,
-                    dest_reg_index, 12'b0};
+                    dest_reg_index, offset};
         end
-    endfunction
-    
-    function [31:0] generate_arm_insrt;
-        parameter DATA_WIDTH = 8;
-        input [DATA_WIDTH - 1:0] bytecode_opcode;
-        
-        case(bytecode_opcode)
-            8'b0000_0011: //iconst_0
-                begin
-                    
-                end
-            8'b0000_0100: //iconst_1
-                begin
-                
-                end
-            8'b0000_0101: //iconst_2
-                begin
-                
-                end
-            8'b0000_0110: //iconst_3
-                begin
-                
-                end
-            8'b0000_0111: //iconst_4
-                begin
-                
-                end
-            8'b0000_1000: //iconst_5
-                begin
-                
-                end
-            8'b0011_1011: //istore_0
-                begin
-                
-                end
-            8'b0011_1100: //istore_1
-                begin
-                
-                end
-            8'b0011_1101: //istore_2
-                begin
-                
-                end
-            8'b0011_1110: //istore_3
-                begin
-                
-                end
-            8'b0001_1010: //iload_0
-                begin
-                
-                end
-            8'b0001_1011: //iload_1
-                begin
-                
-                end
-            8'b0001_1100: //iload_2
-                begin
-                
-                end
-            8'b0001_1101: //iload_3
-                begin
-                
-                end
-            8'b0110_0000: //iadd
-                begin
-                
-                end
-        endcase
     endfunction
 endmodule
 
 
-module ROM(addr, data);
+module ROM(clk, addr, data);
     parameter DATA_WIDTH = 8;
     parameter ADDR_WIDTH = 6;
     parameter DEPTH = 1 << ADDR_WIDTH;
+    input clk;
     input [ADDR_WIDTH - 1:0] addr;
-    output [DATA_WIDTH - 1:0] data;
+    output reg [DATA_WIDTH - 1:0] data;
     
     reg [ADDR_WIDTH - 1:0] rom [DEPTH - 1:0];
     
@@ -162,6 +186,16 @@ module ROM(addr, data);
         begin
             $readmemb("rom.data", rom);
         end
-        
-    assign data = rom[addr];
+
+    always @(posedge clk)
+        begin
+            data <= rom[addr];
+        end
 endmodule
+
+
+
+
+
+
+
