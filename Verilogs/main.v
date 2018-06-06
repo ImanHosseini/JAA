@@ -1,8 +1,13 @@
-module JAA (clk, bytecode_opcode);
-    parameter DATA_WIDTH = 8;
-    input clk;
-    input [DATA_WIDTH - 1:0] bytecode_opcode;
-
+module JAA (clk, reset);
+    parameter
+        READ_OPCODE = 0,
+        READ_OPERAND = 1,
+        GENERATE_ARM_INSTRA = 2;
+    input clk, reset;
+    reg state, next_state;
+    reg [7:0] java_opcode, first_opd, second_opd;
+    integer num_of_opd = 0;
+    
     initial
     	begin
     		result = $fopen("result.txt","w");
@@ -10,81 +15,119 @@ module JAA (clk, bytecode_opcode);
     	
     always @(posedge clk)
         begin
-		    case(bytecode_opcode)
-		        8'b0000_0011: //iconst_0
+            if(reset)
+                state <= READ_OPCODE;
+            else
+                state <= next_state;
+        end
+        
+    always @(*)
+        begin
+            next_state = state;
+            
+		    case(state)
+		        READ_OPCODE:
 		            begin
-		                $fwrite(result,"%b\n", mov_instr(1, 4'b1, 11'b0));
-		                $fwrite(result,"%b\n", push_instr(16'b10));
+		                // read java opcode from ROM and assign it to java_opcode
+		                // set num_of_opd value regarding to java_opcode
+		                if(num_of_opd == 0)
+		                    next_state = GENERATE_ARM_INSTRA;
+		                else
+		                    next_state = READ_OPERAND;
 		            end
-		        8'b0000_0100: //iconst_1
+		        READ_OPERAND:
 		            begin
-		                $fwrite(result,"%b\n", mov_instr(1, 4'b1, 11'b1));
-		                $fwrite(result,"%b\n", push_instr(16'b10));
+		                if(num_of_opd == 1)
+		                    begin
+		                        // first_opd = ROM output
+		                        num_of_opd = 0;
+		                        next_state = GENERATE_ARM_INSTRA;
+		                    end
+		                else
+		                    begin
+		                        // second_opd = ROM output
+		                        num_of_opd = 1;
+		                    end
 		            end
-		        8'b0000_0101: //iconst_2
+		        GENERATE_ARM_INSTRA:
 		            begin
-		                $fwrite(result,"%b\n", mov_instr(1, 4'b1, 11'b10));
-		                $fwrite(result,"%b\n", push_instr(16'b10));
-		            end
-		        8'b0000_0110: //iconst_3
-		            begin
-		                $fwrite(result,"%b\n", mov_instr(1, 4'b1, 11'b11));
-		                $fwrite(result,"%b\n", push_instr(16'b10));
-		            end
-		        8'b0000_0111: //iconst_4
-		            begin
-		                $fwrite(result,"%b\n", mov_instr(1, 4'b1, 11'b100));
-		                $fwrite(result,"%b\n", push_instr(16'b10));
-		            end
-		        8'b0000_1000: //iconst_5
-		            begin
-		                $fwrite(result,"%b\n", mov_instr(1, 4'b1, 11'b101));
-		                $fwrite(result,"%b\n", push_instr(16'b10));
-		            end
-		        8'b0011_1011: //istore_0
-		            begin
-		                $fwrite(result,"%b\n", pop_instr(16'b10));
-		                $fwrite(result,"%b\n", str_ldr_instr(4'b11, 4'b1, 12'b0, 1));
-		            end
-		        8'b0011_1100: //istore_1
-		            begin
-		                $fwrite(result,"%b\n", pop_instr(16'b10));
-		                $fwrite(result,"%b\n", str_ldr_instr(4'b11, 4'b1, 12'b1, 1));
-		            end
-		        8'b0011_1101: //istore_2
-		            begin
-		                $fwrite(result,"%b\n", pop_instr(16'b10));
-		                $fwrite(result,"%b\n", str_ldr_instr(4'b11, 4'b1, 12'b10, 1));
-		            end
-		        8'b0011_1110: //istore_3
-		            begin
-		                $fwrite(result,"%b\n", pop_instr(16'b10));
-		                $fwrite(result,"%b\n", str_ldr_instr(4'b11, 4'b1, 12'b11, 1));
-		            end
-		        8'b0001_1010: //iload_0
-		            begin
-		                $fwrite(result,"%b\n", str_ldr_instr(4'b11, 4'b1, 12'b0, 0));
-		                $fwrite(result,"%b\n", push_instr(16'b10));
-		            end
-		        8'b0001_1011: //iload_1
-		            begin
-		                $fwrite(result,"%b\n", str_ldr_instr(4'b11, 4'b1, 12'b1, 0));
-		                $fwrite(result,"%b\n", push_instr(16'b10));
-		            end
-		        8'b0001_1100: //iload_2
-		            begin
-		                $fwrite(result,"%b\n", str_ldr_instr(4'b11, 4'b1, 12'b10, 0));
-		                $fwrite(result,"%b\n", push_instr(16'b10));
-		            end
-		        8'b0001_1101: //iload_3
-		            begin
-		                $fwrite(result,"%b\n", str_ldr_instr(4'b11, 4'b1, 12'b11, 0));
-		                $fwrite(result,"%b\n", push_instr(16'b10));
-		            end
-		        8'b0110_0000: //iadd
-		            begin
-		                $fwrite(result,"%b\n", pop_instr(16'b110));
-		                $fwrite(result,"%b\n", add_sub_instr(0, 1, 4'b1, 4'b0, 12'b10));
+		                case(java_opcode)
+			                8'b0000_0011: //iconst_0
+					            begin
+					                $fwrite(result,"%b\n", mov_instr(1, 4'b1, 11'b0));
+					                $fwrite(result,"%b\n", push_instr(16'b10));
+					            end
+					        8'b0000_0100: //iconst_1
+					            begin
+					                $fwrite(result,"%b\n", mov_instr(1, 4'b1, 11'b1));
+					                $fwrite(result,"%b\n", push_instr(16'b10));
+					            end
+					        8'b0000_0101: //iconst_2
+					            begin
+					                $fwrite(result,"%b\n", mov_instr(1, 4'b1, 11'b10));
+					                $fwrite(result,"%b\n", push_instr(16'b10));
+					            end
+					        8'b0000_0110: //iconst_3
+					            begin
+					                $fwrite(result,"%b\n", mov_instr(1, 4'b1, 11'b11));
+					                $fwrite(result,"%b\n", push_instr(16'b10));
+					            end
+					        8'b0000_0111: //iconst_4
+					            begin
+					                $fwrite(result,"%b\n", mov_instr(1, 4'b1, 11'b100));
+					                $fwrite(result,"%b\n", push_instr(16'b10));
+					            end
+					        8'b0000_1000: //iconst_5
+					            begin
+					                $fwrite(result,"%b\n", mov_instr(1, 4'b1, 11'b101));
+					                $fwrite(result,"%b\n", push_instr(16'b10));
+					            end
+					        8'b0011_1011: //istore_0
+					            begin
+					                $fwrite(result,"%b\n", pop_instr(16'b10));
+					                $fwrite(result,"%b\n", str_ldr_instr(4'b11, 4'b1, 12'b0, 1));
+					            end
+					        8'b0011_1100: //istore_1
+					            begin
+					                $fwrite(result,"%b\n", pop_instr(16'b10));
+					                $fwrite(result,"%b\n", str_ldr_instr(4'b11, 4'b1, 12'b1, 1));
+					            end
+					        8'b0011_1101: //istore_2
+					            begin
+					                $fwrite(result,"%b\n", pop_instr(16'b10));
+					                $fwrite(result,"%b\n", str_ldr_instr(4'b11, 4'b1, 12'b10, 1));
+					            end
+					        8'b0011_1110: //istore_3
+					            begin
+					                $fwrite(result,"%b\n", pop_instr(16'b10));
+					                $fwrite(result,"%b\n", str_ldr_instr(4'b11, 4'b1, 12'b11, 1));
+					            end
+					        8'b0001_1010: //iload_0
+					            begin
+					                $fwrite(result,"%b\n", str_ldr_instr(4'b11, 4'b1, 12'b0, 0));
+					                $fwrite(result,"%b\n", push_instr(16'b10));
+					            end
+					        8'b0001_1011: //iload_1
+					            begin
+					                $fwrite(result,"%b\n", str_ldr_instr(4'b11, 4'b1, 12'b1, 0));
+					                $fwrite(result,"%b\n", push_instr(16'b10));
+					            end
+					        8'b0001_1100: //iload_2
+					            begin
+					                $fwrite(result,"%b\n", str_ldr_instr(4'b11, 4'b1, 12'b10, 0));
+					                $fwrite(result,"%b\n", push_instr(16'b10));
+					            end
+					        8'b0001_1101: //iload_3
+					            begin
+					                $fwrite(result,"%b\n", str_ldr_instr(4'b11, 4'b1, 12'b11, 0));
+					                $fwrite(result,"%b\n", push_instr(16'b10));
+					            end
+					        8'b0110_0000: //iadd
+					            begin
+					                $fwrite(result,"%b\n", pop_instr(16'b110));
+					                $fwrite(result,"%b\n", add_sub_instr(0, 1, 4'b1, 4'b0, 12'b10));
+					            end
+		                endcase
 		            end
 		    endcase
         end
@@ -192,7 +235,6 @@ module ROM(clk, addr, data);
             data <= rom[addr];
         end
 endmodule
-
 
 
 
