@@ -17,5 +17,4 @@
                 $display("%d : %h",i,data[i]);  
                 end
         end
-
 endmodule 

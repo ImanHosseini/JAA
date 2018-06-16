@@ -3,8 +3,8 @@ module file_reader(
     data
     );
 
-    parameter DATA_WIDTH = 8;
-    parameter CURSOR_WIDTH = 10;
+    parameter DATA_WIDTH = 7;
+    parameter CURSOR_WIDTH = 9;
     input clk;
     output reg [DATA_WIDTH:0] data;
     reg [DATA_WIDTH:0] rom [0:1023]; // 1024 bytes

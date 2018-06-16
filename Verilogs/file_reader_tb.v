@@ -1,7 +1,8 @@
 module file_reader_tb();
-    
+
+    parameter DATA_WIDTH = 7;    
     reg clk = 1;
-    wire [7:0] data;
+    wire [DATA_WIDTH:0] data;
 
     always #5 clk = ~clk;
 
