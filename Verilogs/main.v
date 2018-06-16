@@ -24,7 +24,6 @@ module JAA(
     input reset
     );
 
-
     parameter READ_OPCODE = 0;
     parameter READ_OPERAND = 1;
     parameter GENERATE_ARM_INSTRUCTION = 2;
@@ -41,6 +40,7 @@ module JAA(
     		result = $fopen("result.txt","w");
    	    end
 
+    // manage states
     always @(posedge clk)
         begin
             if(reset)
@@ -52,7 +52,6 @@ module JAA(
     always @(*)
         begin
             next_state = state;
-
 		    case(state)
 		        READ_OPCODE:
 		            begin
@@ -271,26 +270,4 @@ module JAA(
                 };
         end
     endfunction
-endmodule
-
-
-module ROM(clk, address, data);
-    parameter DATA_WIDTH = 8;
-    parameter address_WIDTH = 6;
-    parameter DEPTH = 1 << address_WIDTH;
-    input clk;
-    input [address_WIDTH - 1:0] address;
-    output reg [DATA_WIDTH - 1:0] data;
-    
-    reg [address_WIDTH - 1:0] rom [DEPTH - 1:0];
-    
-    initial
-        begin
-            $readmemb("rom.data", rom);
-        end
-
-    always @(posedge clk)
-        begin
-            data <= rom[address];
-        end
 endmodule
