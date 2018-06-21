@@ -3,7 +3,6 @@ module file_reader(
     data
     );
 
-    // add enable
     parameter DATA_WIDTH = 7;
     parameter CURSOR_WIDTH = 9;
     input clk;
@@ -13,13 +12,14 @@ module file_reader(
 
     initial
         begin
-            $readmemh("test.txt", rom);
+            $readmemh("input_bytecode_1.txt", rom);
         end
 
     always @(posedge clk)
         begin
-            data <= rom[cursor];
-            cursor <= cursor + 1;
+            data = rom[cursor];
+            cursor = cursor + 1;
+            $display("Read : %h",data);
         end
 
 endmodule
