@@ -3,6 +3,7 @@ module file_reader(
     data
     );
 
+    // add enable
     parameter DATA_WIDTH = 7;
     parameter CURSOR_WIDTH = 9;
     input clk;
