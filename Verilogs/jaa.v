@@ -1,21 +1,21 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    21:48:55 06/09/2018 
-// Design Name: 
-// Module Name:    JAA 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
+// Company:
+// Engineer:
 //
-// Dependencies: 
+// Create Date:    21:48:55 06/09/2018
+// Design Name:
+// Module Name:    JAA
+// Project Name:
+// Target Devices:
+// Tool versions:
+// Description:
 //
-// Revision: 
+// Dependencies:
+//
+// Revision:
 // Revision 0.01 - File Created
-// Additional Comments: 
+// Additional Comments:
 //
 //////////////////////////////////////////////////////////////////////////////////
 `include "header.v"
@@ -30,15 +30,24 @@ module jaa(
     reg [1:0] state;
     reg [1:0] next_state;
     reg [7:0] java_opcode;
-    reg [7:0] first_opcode;
-    reg [7:0] second_opcode;
-    integer num_of_opcode = 0;
+    reg [7:0] first_operand;
+    reg [7:0] second_operand;
+    wire [7:0] data;
+    integer num_of_operand = 0;
     integer result;
 
     initial
         begin
     		result = $fopen("result.txt","w");
    	    end
+
+    // here we`re gonna to setup ROM
+    // add enable handling to file_reader module.
+    // in this situation module read bytes clock by clock (bad solution)
+    file_reader file_reader_inst(
+        .clk(clk),
+        .data(data)
+    );
 
     // manage states
     always @(posedge clk)
@@ -55,104 +64,122 @@ module jaa(
 		    case(state)
 		        READ_OPCODE:
 		            begin
-		                // read java opcode from ROM and assign it to java_opcode
-		                // set num_of_opcode value regarding to java_opcode
-		                if(num_of_opcode == 0)
+                    java_opcode = data;
+                    case(java_opcode)
+                        8'b0000_0011, //iconst_0
+                        8'b0000_0100, //iconst_1
+                        8'b0000_0101, //iconst_2
+                        8'b0000_0110, //iconst_3
+                        8'b0000_0111, //iconst_4
+                        8'b0000_1000, //iconst_5
+                        8'b0011_1011, //istore_0
+                        8'b0011_1100, //istore_1
+                        8'b0011_1101, //istore_2
+                        8'b0011_1110, //istore_3
+                        8'b0001_1010, //iload_0
+                        8'b0001_1011, //iload_1
+                        8'b0001_1100, //iload_2
+                        8'b0001_1101, //iload_3
+                        8'b0110_0000: //iadd
+                          begin
+                            num_of_operand = ...;
+                          end
+
+		                if(num_of_operand == 0)
 		                    next_state = GENERATE_ARM_INSTRUCTION;
 		                else
 		                    next_state = READ_OPERAND;
 		            end
 		        READ_OPERAND:
 		            begin
-		                if(num_of_opcode == 1)
+		                if(num_of_operand == 1)
 		                    begin
-		                        // first_opcode = ROM output
-		                        num_of_opcode = 0;
+		                        first_operand = data;
 		                        next_state = GENERATE_ARM_INSTRUCTION;
 		                    end
-		                else
+		                else if(num_of_operand == 2)
 		                    begin
-		                        // second_opcode = ROM output
-		                        num_of_opcode = 1;
+                            second_operand = data;
 		                    end
+                    num_of_operand = num_of_operand - 1;
 		            end
 		        GENERATE_ARM_INSTRUCTION:
 		            begin
 		                case(java_opcode)
 			                8'b0000_0011: //iconst_0
 					            begin
-					                $fwrite(result,"%b\n", mov_instruction(1, 4'b1, 11'b0));
-					                $fwrite(result,"%b\n", push_instruction(16'b10));
+					                $display("%b\n", mov_instruction(1, 4'b1, 11'b0));
+					                $display("%b\n", push_instruction(16'b10));
 					            end
 					        8'b0000_0100: //iconst_1
 					            begin
-					                $fwrite(result,"%b\n", mov_instruction(1, 4'b1, 11'b1));
-					                $fwrite(result,"%b\n", push_instruction(16'b10));
+					                $display("%b\n", mov_instruction(1, 4'b1, 11'b1));
+					                $display("%b\n", push_instruction(16'b10));
 					            end
 					        8'b0000_0101: //iconst_2
 					            begin
-					                $fwrite(result,"%b\n", mov_instruction(1, 4'b1, 11'b10));
-					                $fwrite(result,"%b\n", push_instruction(16'b10));
+					                $display("%b\n", mov_instruction(1, 4'b1, 11'b10));
+					                $display("%b\n", push_instruction(16'b10));
 					            end
 					        8'b0000_0110: //iconst_3
 					            begin
-					                $fwrite(result,"%b\n", mov_instruction(1, 4'b1, 11'b11));
-					                $fwrite(result,"%b\n", push_instruction(16'b10));
+					                $display("%b\n", mov_instruction(1, 4'b1, 11'b11));
+					                $display("%b\n", push_instruction(16'b10));
 					            end
 					        8'b0000_0111: //iconst_4
 					            begin
-					                $fwrite(result,"%b\n", mov_instruction(1, 4'b1, 11'b100));
-					                $fwrite(result,"%b\n", push_instruction(16'b10));
+					                $display("%b\n", mov_instruction(1, 4'b1, 11'b100));
+					                $display("%b\n", push_instruction(16'b10));
 					            end
 					        8'b0000_1000: //iconst_5
 					            begin
-					                $fwrite(result,"%b\n", mov_instruction(1, 4'b1, 11'b101));
-					                $fwrite(result,"%b\n", push_instruction(16'b10));
+					                $display("%b\n", mov_instruction(1, 4'b1, 11'b101));
+					                $display("%b\n", push_instruction(16'b10));
 					            end
 					        8'b0011_1011: //istore_0
 					            begin
-					                $fwrite(result,"%b\n", pop_instruction(16'b10));
-					                $fwrite(result,"%b\n", str_ldr_instruction(4'b11, 4'b1, 12'b0, 1));
+					                $display("%b\n", pop_instruction(16'b10));
+					                $display("%b\n", str_ldr_instruction(4'b11, 4'b1, 12'b0, 1));
 					            end
 					        8'b0011_1100: //istore_1
 					            begin
-					                $fwrite(result,"%b\n", pop_instruction(16'b10));
-					                $fwrite(result,"%b\n", str_ldr_instruction(4'b11, 4'b1, 12'b1, 1));
+					                $display("%b\n", pop_instruction(16'b10));
+					                $display("%b\n", str_ldr_instruction(4'b11, 4'b1, 12'b1, 1));
 					            end
 					        8'b0011_1101: //istore_2
 					            begin
-					                $fwrite(result,"%b\n", pop_instruction(16'b10));
-					                $fwrite(result,"%b\n", str_ldr_instruction(4'b11, 4'b1, 12'b10, 1));
+					                $display("%b\n", pop_instruction(16'b10));
+					                $display("%b\n", str_ldr_instruction(4'b11, 4'b1, 12'b10, 1));
 					            end
 					        8'b0011_1110: //istore_3
 					            begin
-					                $fwrite(result,"%b\n", pop_instruction(16'b10));
-					                $fwrite(result,"%b\n", str_ldr_instruction(4'b11, 4'b1, 12'b11, 1));
+					                $display("%b\n", pop_instruction(16'b10));
+					                $display("%b\n", str_ldr_instruction(4'b11, 4'b1, 12'b11, 1));
 					            end
 					        8'b0001_1010: //iload_0
 					            begin
-					                $fwrite(result,"%b\n", str_ldr_instruction(4'b11, 4'b1, 12'b0, 0));
-					                $fwrite(result,"%b\n", push_instruction(16'b10));
+					                $display("%b\n", str_ldr_instruction(4'b11, 4'b1, 12'b0, 0));
+					                $display("%b\n", push_instruction(16'b10));
 					            end
 					        8'b0001_1011: //iload_1
 					            begin
-					                $fwrite(result,"%b\n", str_ldr_instruction(4'b11, 4'b1, 12'b1, 0));
-					                $fwrite(result,"%b\n", push_instruction(16'b10));
+					                $display("%b\n", str_ldr_instruction(4'b11, 4'b1, 12'b1, 0));
+					                $display("%b\n", push_instruction(16'b10));
 					            end
 					        8'b0001_1100: //iload_2
 					            begin
-					                $fwrite(result,"%b\n", str_ldr_instruction(4'b11, 4'b1, 12'b10, 0));
-					                $fwrite(result,"%b\n", push_instruction(16'b10));
+					                $display("%b\n", str_ldr_instruction(4'b11, 4'b1, 12'b10, 0));
+					                $display("%b\n", push_instruction(16'b10));
 					            end
 					        8'b0001_1101: //iload_3
 					            begin
-					                $fwrite(result,"%b\n", str_ldr_instruction(4'b11, 4'b1, 12'b11, 0));
-					                $fwrite(result,"%b\n", push_instruction(16'b10));
+					                $display("%b\n", str_ldr_instruction(4'b11, 4'b1, 12'b11, 0));
+					                $display("%b\n", push_instruction(16'b10));
 					            end
 					        8'b0110_0000: //iadd
 					            begin
-					                $fwrite(result,"%b\n", pop_instruction(16'b110));
-					                $fwrite(result,"%b\n", add_sub_instruction(0, 1, 4'b1, 4'b0, 12'b10));
+					                $display("%b\n", pop_instruction(16'b110));
+					                $display("%b\n", add_sub_instruction(0, 1, 4'b1, 4'b0, 12'b10));
 					            end
 		                endcase
 		            end
@@ -181,9 +208,9 @@ module jaa(
         localparam [6:0] instruction_prefix = 6'b111000;
         localparam [4:0] add_opcode = 4'b0100;
         localparam [4:0] sub_opcode = 4'b0010;
-        input is_second_opcode_imm, is_add;
-        input [3:0] first_opcode_reg_index, dest_reg_index;
-        input [11:0] second_opcode;
+        input is_second_operand_imm, is_add;
+        input [3:0] first_operand_reg_index, dest_reg_index;
+        input [11:0] second_operand;
         reg [4:0] opcode;
 
         begin
@@ -191,25 +218,25 @@ module jaa(
                 opcode = add_opcode;
             else
                 opcode = sub_opcode;
-            if(is_second_opcode_imm)
+            if(is_second_operand_imm)
                 add_sub_instruction = {
-                instruction_prefix, 
-                is_second_opcode_imm,
-                opcode, 
-                1'b0, 
-                first_opcode_reg_index,
-                dest_reg_index, 
-                second_opcode
+                instruction_prefix,
+                is_second_operand_imm,
+                opcode,
+                1'b0,
+                first_operand_reg_index,
+                dest_reg_index,
+                second_operand
                 };
             else
                 add_sub_instruction = {
                 instruction_prefix,
-                is_second_opcode_imm,
+                is_second_operand_imm,
                 opcode,
                 1'b0,
-                first_opcode_reg_index,
+                first_operand_reg_index,
                 dest_reg_index,
-                second_opcode
+                second_operand
                 };
         end
     endfunction
@@ -217,31 +244,31 @@ module jaa(
     function [31:0] mov_instruction;
         localparam [6:0] instruction_prefix = 6'b111000;
         localparam [4:0] mov_opcode = 4'b1101;
-        localparam first_opcode_reg_index = 4'b0000;
-        input is_second_opcode_imm;
+        localparam first_operand_reg_index = 4'b0000;
+        input is_second_operand_imm;
         input [3:0] dest_reg_index;
-        input [11:0] second_opcode;
+        input [11:0] second_operand;
 
         begin
-            if(is_second_opcode_imm)
+            if(is_second_operand_imm)
                 mov_instruction = {
-                instruction_prefix, 
-                is_second_opcode_imm,
-                mov_opcode, 
-                1'b0, 
-                first_opcode_reg_index,
-                dest_reg_index, 
-                second_opcode
+                instruction_prefix,
+                is_second_operand_imm,
+                mov_opcode,
+                1'b0,
+                first_operand_reg_index,
+                dest_reg_index,
+                second_operand
                 };
             else
                 mov_instruction = {
-                instruction_prefix, 
-                is_second_opcode_imm,
-                mov_opcode, 
-                1'b0, 
-                first_opcode_reg_index,
-                dest_reg_index, 
-                second_opcode
+                instruction_prefix,
+                is_second_operand_imm,
+                mov_opcode,
+                1'b0,
+                first_operand_reg_index,
+                dest_reg_index,
+                second_operand
                 };
         end
     endfunction
@@ -256,7 +283,7 @@ module jaa(
         begin
             if(is_str)
                 str_ldr_instruction = {
-                str_instruction_prefix, 
+                str_instruction_prefix,
                 mem_address_reg_index,
                 dest_reg_index,
                 offset
