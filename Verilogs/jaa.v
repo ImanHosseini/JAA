@@ -182,17 +182,9 @@ module jaa(
                                 end
                             8'b0011_0110: //istore
                                 begin
-                                    //take operand
+                                    next_state = READ_OPERAND;
+                                    num_of_operand = 1;
                                 end
-                            istore op:
-                              pop{r1}
-                              str r1,[r3,#op]
-
-                            // ONE operand java opcodes
-                            //    begin
-                            //       num_of_operand = 1;
-                            //       next_state = READ_OPERAND;
-                            //    end
                             default:
                                 begin
                                     next_state = READ_OPCODE;
@@ -203,15 +195,16 @@ module jaa(
                 READ_OPERAND:
                     begin
                         if(num_of_operand == 1)
-                                begin
-                                    first_operand = data;
-                                    next_state = GENERATE_ARM_INSTRUCTION;
-                                end
-                            //else if(num_of_operand == 2)
-                            //  begin
-                            //    second_operand = data;
-                            // end
-                            num_of_operand = num_of_operand - 1;
+                            begin
+                                case(java_opcode)
+                                    8'b0011_0110: //istore
+                                        first_operand = data;
+                                        $display("%b", pop_instruction(16'b10));
+                                        $display("%b", str_ldr_instruction(4'b0011, 4'b0001, first_operand, 1));
+                                endcase
+                                next_state = READ_OPCODE;
+                            end
+                        num_of_operand = num_of_operand - 1;
 		            end
 		    endcase
         end
