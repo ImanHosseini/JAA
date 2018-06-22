@@ -137,6 +137,57 @@ module jaa(
                                     $display("%b", pop_instruction(16'b110));
                                     $display("%b", add_sub_instruction(0, 1, 4'b0001, 4'b0, 12'b10));
                                 end
+                            8'b0101_1001: //dup
+                                begin
+                                    $display("%b", pop_instruction(16'b1));
+                                    $display("%b", push_instruction(16'b1));
+                                    $display("%b", push_instruction(16'b10));
+                                end
+                            8'b0101_1010: //dup_x1
+                                begin
+                                    $display("%b", pop_instruction(16'b11));
+                                    $display("%b", push_instruction(16'b10));
+                                    $display("%b", push_instruction(16'b11));
+                                end
+                            8'b0101_1011: //dup_x2
+                                begin
+                                    $display("%b", pop_instruction(16'b111));
+                                    $display("%b", push_instruction(16'b100));
+                                    $display("%b", push_instruction(16'b10));
+                                    $display("%b", push_instruction(16'b101));
+                                end
+                            8'b0101_1100: //dup2
+                                begin
+                                    $display("%b", pop_instruction(16'b11));
+                                    $display("%b", push_instruction(16'b10));
+                                    $display("%b", push_instruction(16'b11));
+                                    $display("%b", push_instruction(16'b1));
+                                end
+                            8'b0101_1101: //dup2_x1
+                                begin
+                                    $display("%b", pop_instruction(16'b111));
+                                    $display("%b", push_instruction(16'b100));
+                                    $display("%b", push_instruction(16'b10));
+                                    $display("%b", push_instruction(16'b101));
+                                    $display("%b", push_instruction(16'b10));
+                                end
+                            8'b0101_1110: //dup2_x2
+                                begin
+                                    $display("%b", pop_instruction(16'b1111));
+                                    $display("%b", push_instruction(16'b1000));
+                                    $display("%b", push_instruction(16'b100));
+                                    $display("%b", push_instruction(16'b10));
+                                    $display("%b", push_instruction(16'b1001));
+                                    $display("%b", push_instruction(16'b100));
+                                end
+                            8'b0011_0110: //istore
+                                begin
+                                    //take operand
+                                end
+                            istore op:
+                              pop{r1}
+                              str r1,[r3,#op]
+
                             // ONE operand java opcodes
                             //    begin
                             //       num_of_operand = 1;
