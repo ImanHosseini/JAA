@@ -10,13 +10,13 @@ module file_writer_tb();
     file_reader fr_unit_under_test(
         .clk(clk),
         .data(data)
-        );
+    );
 
     file_writer fw_unit_under_test(
         .enable(clk),
         .done(done),
         .data(data)
-        );
+    );
 
     always @(posedge clk)
         begin

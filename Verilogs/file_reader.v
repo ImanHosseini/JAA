@@ -18,7 +18,7 @@ module file_reader(
     always @(posedge clk)
         begin
             data = rom[cursor];
-            cursor = cursor + 1;
+            cursor = cursor + 1'b1;
             $display("Read : %h",data);
         end
 

@@ -20,34 +20,38 @@
 //////////////////////////////////////////////////////////////////////////////////
 module jaa(
     input clk,
-    input reset
+    input reset,
+	output reg [31:0] arm_instruction
     );
 
     parameter READ_OPCODE = 0;
     parameter READ_OPERAND = 1;
     parameter GENERATE_ARM_INSTRUCTION = 2;
-    reg [1:0] state;
-    reg [1:0] next_state;
+    reg [1:0] state = READ_OPCODE;
+    reg [1:0] next_state = READ_OPCODE;
     reg [7:0] java_opcode;
     reg [7:0] first_operand;
     reg [7:0] second_operand;
-    wire [7:0] data;
-    integer num_of_operand = 0;
+    reg [7:0] data;
+    reg [1:0] num_of_operand = 0;
     integer result;
+
+    parameter DATA_WIDTH = 7;
+    parameter CURSOR_WIDTH = 9;
+    reg [DATA_WIDTH:0] rom [0:1023]; // 1024 bytes
+    reg [CURSOR_WIDTH:0] cursor = 0; // 0 to 1023
 
     initial
         begin
     		result = $fopen("result.txt","w");
+    		$readmemh("input_bytecode_1.txt", rom);
    	    end
-
-    file_reader file_reader_inst(
-        .clk(clk),
-        .data(data)
-    );
 
     // manage states
     always @(posedge clk)
         begin
+            data <= rom[cursor];
+            cursor <= cursor + 1'b1;
             if(reset)
                 state <= READ_OPCODE;
             else
@@ -56,6 +60,7 @@ module jaa(
 
     always @(*)
         begin
+            $display("Read : %h",data);
             next_state = state;
             case(state)
                 READ_OPCODE:
@@ -64,8 +69,8 @@ module jaa(
                         case(java_opcode)
                             8'b0000_0011: //iconst_0
                                 begin
-                                    $display("%b", mov_instruction(1, 4'b0001, 11'b0));
-                                    $display("%b", push_instruction(16'b10));
+                                    $display("jaa :%b", mov_instruction(1, 4'b0001, 11'b0));
+                                    $display("jaa :%b", push_instruction(16'b10));
                                 end
                             8'b0000_0100: //iconst_1
                                 begin
@@ -188,7 +193,7 @@ module jaa(
                             default:
                                 begin
                                     next_state = READ_OPCODE;
-                                    $display("Not supported.");
+                                    $display("Not supported. %b", java_opcode);
                                 end
                         endcase
                     end
@@ -198,9 +203,11 @@ module jaa(
                             begin
                                 case(java_opcode)
                                     8'b0011_0110: //istore
-                                        first_operand = data;
-                                        $display("%b", pop_instruction(16'b10));
-                                        $display("%b", str_ldr_instruction(4'b0011, 4'b0001, first_operand, 1));
+                                        begin
+                                            first_operand = data;
+                                            $display("%b", pop_instruction(16'b10));
+                                            $display("%b", str_ldr_instruction(4'b0011, 4'b0001, first_operand, 1));
+                                        end
                                 endcase
                                 next_state = READ_OPCODE;
                             end
