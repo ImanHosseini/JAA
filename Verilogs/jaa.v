@@ -190,6 +190,12 @@ module jaa(
                                     next_state = READ_OPERAND;
                                     num_of_operand = 1;
                                 end
+                            8'b0101_1111: // swap
+                                begin
+                                    $display("%b", pop_instruction(16'b11));
+                                    $display("%b", push_instruction(16'b11));
+                                end
+
                             default:
                                 begin
                                     next_state = READ_OPCODE;
