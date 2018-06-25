@@ -185,7 +185,7 @@ module jaa(
                                     $display("%b", push_instruction(16'b1001));
                                     $display("%b", push_instruction(16'b100));
                                 end
-                            8'b0011_0110: //istore
+                            8'b0011_0110: //istore operand
                                 begin
                                     next_state = READ_OPERAND;
                                     num_of_operand = 1;
@@ -195,6 +195,13 @@ module jaa(
                                     $display("%b", pop_instruction(16'b11));
                                     $display("%b", push_instruction(16'b11));
                                 end
+                            8'b0001_0101: // iload operand
+                                begin
+                                    next_state = READ_OPERAND;
+                                    num_of_operand = 1;
+                                end
+
+
 
                             default:
                                 begin
@@ -213,6 +220,12 @@ module jaa(
                                             first_operand = data;
                                             $display("%b", pop_instruction(16'b10));
                                             $display("%b", str_ldr_instruction(4'b0011, 4'b0001, first_operand, 1));
+                                        end
+                                    8'b0001_0101: // iload operand
+                                        begin
+                                            first_operand = data;
+                                            $display("%b", str_ldr_instruction(4'b0011, 4'b0001, first_operand, 0));
+                                            $display("%b", push_instruction(16'b10));
                                         end
                                 endcase
                                 next_state = READ_OPCODE;
