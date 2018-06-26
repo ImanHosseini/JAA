@@ -1,32 +1,32 @@
 module file_writer_tb();
-    
-    parameter DATA_WIDTH = 7;
-    reg clk = 0;
-    reg done = 0;
-    wire [DATA_WIDTH:0] data;
 
-    always #5 clk = ~clk;
+  parameter DATA_WIDTH = 7;
+  reg clk = 0;
+  reg done = 0;
+  wire [DATA_WIDTH:0] data;
 
-    file_reader fr_unit_under_test(
-        .clk(clk),
-        .data(data)
-    );
+  always #5 clk = ~clk;
 
-    file_writer fw_unit_under_test(
-        .enable(clk),
-        .done(done),
-        .data(data)
-    );
+  file_reader fr_unit_under_test(
+    .clk(clk),
+    .data(data)
+  );
 
-    always @(posedge clk)
-        begin
-            $display("%h",data);
-        end
+  file_writer fw_unit_under_test(
+    .enable(clk),
+    .done(done),
+    .data(data)
+  );
 
-    initial
-        begin
-            #20000 done = 1;
-            $stop;
-        end
+  always @(posedge clk)
+    begin
+      $display("%h",data);
+    end
 
-endmodule 
+  initial
+    begin
+      #20000 done = 1;
+      $stop;
+    end
+
+endmodule

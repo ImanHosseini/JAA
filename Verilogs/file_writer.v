@@ -1,30 +1,30 @@
 module file_writer(
-    enable,
-    done,
-    data
-    );
+  enable,
+  done,
+  data
+);
 
-    parameter DATA_WIDTH = 7;
-    input enable;
-    input done;
-    input [DATA_WIDTH:0] data;
-    integer file;
+  parameter DATA_WIDTH = 7;
+  input enable;
+  input done;
+  input [DATA_WIDTH:0] data;
+  integer file;
 
-    initial 
+  initial
+    begin
+      file = $fopen("output.txt","w");
+    end
+
+  always @(enable)
+    begin
+      if (enable)
         begin
-            file = $fopen("output.txt","w");
+          $fwrite(file,"%h\n",data);
         end
-
-    always @(enable)
+      else if (done)
         begin
-            if (enable)
-                begin
-                    $fwrite(file,"%h\n",data);
-                end
-            else if (done) 
-                begin
-                    $fclose(file); 
-                end
+          $fclose(file);
         end
-    
+    end
+
 endmodule
