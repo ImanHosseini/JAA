@@ -21,25 +21,27 @@
 module jaa(
   input clk,
   input reset,
-  output reg [31:0] arm_instruction
+  output reg [7:0] data
 );
 
-  parameter READ_OPCODE = 0;
-  parameter READ_OPERAND = 1;
-  parameter GENERATE_ARM_INSTRUCTION = 2;
-  reg [1:0] state = READ_OPCODE;
+  parameter START = 0;
+  parameter READ_OPCODE = 1;
+  parameter READ_OPERAND = 2;
+  parameter GENERATE_ARM_INSTRUCTION = 3;
+  parameter DATA_WIDTH = 7;
+  parameter CURSOR_WIDTH = 9;
+  reg [2:0] state = START;
   reg [1:0] next_state = READ_OPCODE;
   reg [7:0] java_opcode;
   reg [7:0] first_operand;
   reg [7:0] second_operand;
-  reg [7:0] data;
   reg [1:0] num_of_operand = 0;
-  integer result;
-
-  parameter DATA_WIDTH = 7;
-  parameter CURSOR_WIDTH = 9;
+  reg [191:0] instructions;
+  reg [2:0] quantity;
   reg [DATA_WIDTH:0] rom [0:1023]; // 1024 bytes
   reg [CURSOR_WIDTH:0] cursor = 0; // 0 to 1023
+  reg write_enable = 0;
+  integer result;
 
   initial
     begin
@@ -47,11 +49,17 @@ module jaa(
       $readmemh("input_bytecode_1.txt", rom);
     end
 
+  memory_writer mw(
+    .clk(clk),
+    .write_enable(write_enable),
+    .instructions(instructions),
+    .quantity(quantity)
+  );
+
   // manage states
   always @(posedge clk)
     begin
       data <= rom[cursor];
-      cursor <= cursor + 1'b1;
       if(reset)
         state <= READ_OPCODE;
       else
@@ -60,20 +68,89 @@ module jaa(
 
   always @(*)
     begin
-      $display("Read : %h",data);
-      next_state = state;
       case(state)
+        START:
+          begin
+            next_state = READ_OPCODE;
+            cursor = 0;
+          end
         READ_OPCODE:
           begin
             java_opcode = data;
             case(java_opcode)
+              8'b0000_0011, //iconst_0
+              8'b0000_0100, //iconst_1
+              8'b0000_0101, //iconst_2
+              8'b0000_0110, //iconst_3
+              8'b0000_0111, //iconst_4
+              8'b0000_1000, //iconst_5
+              8'b0011_1011, //istore_0
+              8'b0011_1100, //istore_1
+              8'b0011_1101, //istore_2
+              8'b0011_1110, //istore_3
+              8'b0001_1010, //iload_0
+              8'b0001_1011, //iload_1
+              8'b0001_1100, //iload_2
+              8'b0001_1101, //iload_3
+              8'b0110_0000, //iadd
+              8'b0101_1001, //dup
+              8'b0101_1010, //dup_x1
+              8'b0101_1011, //dup_x2
+              8'b0101_1100, //dup2
+              8'b0101_1101, //dup2_x1
+              8'b0101_1110, //dup2_x2
+              8'b0101_1111: // swap
+                begin
+                  next_state = GENERATE_ARM_INSTRUCTION;
+                  num_of_operand = 0;
+                  cursor = cursor + 1'b1;
+                end
+              8'b0011_0110, //istore operand
+              8'b0001_0101: // iload operand
+                begin
+                  next_state = READ_OPERAND;
+                  num_of_operand = 1;
+                  cursor = cursor + 1'b1;
+                end
+              default:
+                begin
+                  next_state = READ_OPCODE;
+                  num_of_operand = 0;
+                  cursor = cursor + 1'b1;
+                  $display("Not supported. %b %d ", java_opcode,cursor);
+                end
+            endcase
+          end
+        READ_OPERAND:
+          begin
+            if(num_of_operand == 1)
+              begin
+                case(java_opcode)
+                  8'b0011_0110, // istore operand
+                  8'b0001_0101: // iload operand
+                    begin
+                      first_operand = data;
+                    end
+                endcase
+                next_state = GENERATE_ARM_INSTRUCTION;
+                cursor = cursor + 1'b1;
+              end
+            num_of_operand = num_of_operand - 1'b1;
+          end
+        GENERATE_ARM_INSTRUCTION:
+          begin
+            $display("Opcode : %h %d", java_opcode,cursor);
+            next_state = READ_OPCODE;
+            case (java_opcode)
               8'b0000_0011: //iconst_0
                 begin
-                  $display("jaa :%b", mov_instruction(1, 4'b0001, 11'b0));
-                  $display("jaa :%b", push_instruction(16'b10));
+                  $display("%b", mov_instruction(1, 4'b0001, 11'b0));
+                  $display("%b", push_instruction(16'b10));
                 end
               8'b0000_0100: //iconst_1
                 begin
+                  instructions = {push_instruction(16'b10),mov_instruction(1, 4'b0001, 11'b1)};
+                  quantity = 3'b010;
                   $display("%b", mov_instruction(1, 4'b0001, 11'b1));
                   $display("%b", push_instruction(16'b10));
                 end
@@ -185,49 +262,26 @@ module jaa(
                   $display("%b", push_instruction(16'b1001));
                   $display("%b", push_instruction(16'b100));
                 end
-              8'b0011_0110: //istore operand
-                begin
-                  next_state = READ_OPERAND;
-                  num_of_operand = 1;
-                end
               8'b0101_1111: // swap
                 begin
                   $display("%b", pop_instruction(16'b11));
                   $display("%b", push_instruction(16'b11));
                 end
+              8'b0011_0110: // istore operand
+                begin
+                    $display("%b", pop_instruction(16'b10));
+                    $display("%b", str_ldr_instruction(4'b0011, 4'b0001, first_operand, 1));
+                  end
               8'b0001_0101: // iload operand
                 begin
-                  next_state = READ_OPERAND;
-                  num_of_operand = 1;
+                  $display("%b", str_ldr_instruction(4'b0011, 4'b0001, first_operand, 0));
+                  $display("%b", push_instruction(16'b10));
                 end
               default:
                 begin
-                  next_state = READ_OPCODE;
                   $display("Not supported. %b", java_opcode);
                 end
             endcase
-          end
-        READ_OPERAND:
-          begin
-            if(num_of_operand == 1)
-              begin
-                case(java_opcode)
-                  8'b0011_0110: // istore operand
-                    begin
-                      first_operand = data;
-                      $display("%b", pop_instruction(16'b10));
-                      $display("%b", str_ldr_instruction(4'b0011, 4'b0001, first_operand, 1));
-                    end
-                  8'b0001_0101: // iload operand
-                    begin
-                      first_operand = data;
-                      $display("%b", str_ldr_instruction(4'b0011, 4'b0001, first_operand, 0));
-                      $display("%b", push_instruction(16'b10));
-                    end
-                endcase
-                next_state = READ_OPCODE;
-              end
-            num_of_operand = num_of_operand - 1;
           end
       endcase
     end
