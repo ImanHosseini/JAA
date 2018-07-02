@@ -2,7 +2,7 @@ module memory_writer(
   input clk,
   input write_enable,
   input [191:0] instructions,
-  input [2:0] quantity
+  input [3:0] quantity
 );
 
   reg [31:0] ram [0:1023]; // 1024 bytes

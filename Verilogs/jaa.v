@@ -32,7 +32,7 @@ module jaa(
   parameter DATA_WIDTH = 7;
   parameter CURSOR_WIDTH = 9;
   reg [2:0] state = START;
-  reg [1:0] next_state = READ_OPCODE;
+  reg [2:0] next_state = READ_OPCODE;
   reg [DATA_WIDTH:0] java_opcode;
   reg [DATA_WIDTH:0] first_operand;
   reg [DATA_WIDTH:0] second_operand;
@@ -40,7 +40,7 @@ module jaa(
   reg [CURSOR_WIDTH:0] cursor = 0; // 0 to 1023
   reg [1:0] num_of_operand = 0;
   reg [191:0] instructions;
-  reg [2:0] quantity;
+  reg [3:0] quantity;
   reg write_enable = 0;
   integer result;
 
@@ -74,11 +74,13 @@ module jaa(
           begin
             next_state = READ_OPCODE;
             num_of_operand = 0;
+            write_enable = 0;
             cursor = 0;
           end
         READ_OPCODE:
           begin
             java_opcode = data;
+            write_enable = 0;
             case(java_opcode)
               8'b0000_0011, //iconst_0
               8'b0000_0100, //iconst_1
@@ -125,6 +127,7 @@ module jaa(
           end
         READ_OPERAND:
           begin
+            write_enable = 0;
             if(num_of_operand == 1)
               begin
                 case(java_opcode)
@@ -145,6 +148,7 @@ module jaa(
             next_state = READ_OPCODE;
             num_of_operand = 0;
             cursor = cursor;
+            write_enable = 1;
             case (java_opcode)
               8'b0000_0011: //iconst_0
                 begin
