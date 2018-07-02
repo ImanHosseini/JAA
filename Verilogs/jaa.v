@@ -6,7 +6,7 @@
 // Create Date:    21:48:55 06/09/2018
 // Design Name:
 // Module Name:    JAA
-// Project Name:
+// Project Name:    JAA
 // Target Devices:
 // Tool versions:
 // Description:
@@ -24,22 +24,23 @@ module jaa(
   output reg [7:0] data
 );
 
-  parameter START = 0;
-  parameter READ_OPCODE = 1;
-  parameter READ_OPERAND = 2;
-  parameter GENERATE_ARM_INSTRUCTION = 3;
+  parameter START = 3'b000;
+  parameter READ_OPCODE = 3'b001;
+  parameter READ_OPERAND = 3'b010;
+  parameter FETCH_FROM_CONSTANT_POOL = 3'b011;
+  parameter GENERATE_ARM_INSTRUCTION = 3'b100;
   parameter DATA_WIDTH = 7;
   parameter CURSOR_WIDTH = 9;
   reg [2:0] state = START;
   reg [1:0] next_state = READ_OPCODE;
-  reg [7:0] java_opcode;
-  reg [7:0] first_operand;
-  reg [7:0] second_operand;
+  reg [DATA_WIDTH:0] java_opcode;
+  reg [DATA_WIDTH:0] first_operand;
+  reg [DATA_WIDTH:0] second_operand;
+  reg [DATA_WIDTH:0] rom [0:1023]; // 1024 bytes
+  reg [CURSOR_WIDTH:0] cursor = 0; // 0 to 1023
   reg [1:0] num_of_operand = 0;
   reg [191:0] instructions;
   reg [2:0] quantity;
-  reg [DATA_WIDTH:0] rom [0:1023]; // 1024 bytes
-  reg [CURSOR_WIDTH:0] cursor = 0; // 0 to 1023
   reg write_enable = 0;
   integer result;
 
@@ -61,7 +62,7 @@ module jaa(
     begin
       data <= rom[cursor];
       if(reset)
-        state <= READ_OPCODE;
+        state <= START;
       else
         state <= next_state;
     end
@@ -72,6 +73,7 @@ module jaa(
         START:
           begin
             next_state = READ_OPCODE;
+            num_of_operand = 0;
             cursor = 0;
           end
         READ_OPCODE:
@@ -141,6 +143,8 @@ module jaa(
           begin
             $display("Opcode : %h %d", java_opcode,cursor);
             next_state = READ_OPCODE;
+            num_of_operand = 0;
+            cursor = cursor;
             case (java_opcode)
               8'b0000_0011: //iconst_0
                 begin
@@ -269,9 +273,9 @@ module jaa(
                 end
               8'b0011_0110: // istore operand
                 begin
-                    $display("%b", pop_instruction(16'b10));
-                    $display("%b", str_ldr_instruction(4'b0011, 4'b0001, first_operand, 1));
-                  end
+                  $display("%b", pop_instruction(16'b10));
+                  $display("%b", str_ldr_instruction(4'b0011, 4'b0001, first_operand, 1));
+                end
               8'b0001_0101: // iload operand
                 begin
                   $display("%b", str_ldr_instruction(4'b0011, 4'b0001, first_operand, 0));
