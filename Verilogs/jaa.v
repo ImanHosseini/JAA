@@ -25,19 +25,24 @@ module jaa(
 );
 
   parameter START = 3'b000;
-  parameter READ_OPCODE = 3'b001;
-  parameter READ_OPERAND = 3'b010;
-  parameter FETCH_FROM_CONSTANT_POOL = 3'b011;
-  parameter GENERATE_ARM_INSTRUCTION = 3'b100;
+  parameter READ_OFFSETS = 3'b001;
+  parameter READ_OPCODE = 3'b010;
+  parameter READ_OPERAND = 3'b011;
+  parameter FETCH_FROM_CONSTANT_POOL = 3'b100;
+  parameter GENERATE_ARM_INSTRUCTION = 3'b111;
   parameter DATA_WIDTH = 7;
-  parameter CURSOR_WIDTH = 9;
+  parameter CURSOR_WIDTH = 15;
+  parameter CURSOR_START = 16'b110;
+  parameter CP_TABLE_START = 16'b1011;
   reg [2:0] state = START;
   reg [2:0] next_state = READ_OPCODE;
+  reg [15:0] cp_data_offset;
+  reg [15:0] cp_code_offset;
   reg [DATA_WIDTH:0] java_opcode;
   reg [DATA_WIDTH:0] first_operand;
   reg [DATA_WIDTH:0] second_operand;
   reg [DATA_WIDTH:0] rom [0:1023]; // 1024 bytes
-  reg [CURSOR_WIDTH:0] cursor = 0; // 0 to 1023
+  reg [CURSOR_WIDTH:0] cursor = CURSOR_START; // 0 to 1023
   reg [1:0] num_of_operand = 0;
   reg [191:0] instructions;
   reg [3:0] quantity;
@@ -72,10 +77,19 @@ module jaa(
       case(state)
         START:
           begin
+            next_state = READ_OFFSETS;
+            num_of_operand = 0;
+            write_enable = 0;
+            cursor = CURSOR_START;
+          end
+        READ_OFFSETS:
+          begin
             next_state = READ_OPCODE;
             num_of_operand = 0;
             write_enable = 0;
-            cursor = 0;
+            cp_data_offset = {rom[cursor] , rom[cursor+1]};
+            cp_code_offset = {rom[cursor+2] , rom[cursor+3]};
+            cursor = cp_code_offset;
           end
         READ_OPCODE:
           begin
@@ -118,6 +132,10 @@ module jaa(
                   num_of_operand = 1;
                   cursor = cursor + 1'b1;
                 end
+              8'b0000_0001:
+                begin
+                  next_state = FETCH_FROM_CONSTANT_POOL;
+                end
               default:
                 begin
                   next_state = READ_OPCODE;
@@ -143,6 +161,13 @@ module jaa(
                 cursor = cursor + 1'b1;
               end
             num_of_operand = num_of_operand - 1'b1;
+          end
+        FETCH_FROM_CONSTANT_POOL:
+          begin
+            next_state = READ_OPCODE;
+            $display("%b",{rom[cp_data_offset],rom[cp_data_offset + 1]});
+            $display("cp_data_offset: %b",cp_data_offset);
+            $display("cp_code_offset: %b",cp_code_offset);
           end
         GENERATE_ARM_INSTRUCTION:
           begin
