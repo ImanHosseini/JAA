@@ -103,14 +103,16 @@ module jaa(
               8'b0101_1100, //dup2
               8'b0101_1101, //dup2_x1
               8'b0101_1110, //dup2_x2
-              8'b0101_1111: // swap
+              8'b0101_1111, //swap
+              8'b0111_1110, //iand
+              8'b1000_0010: //ixor
                 begin
                   next_state = GENERATE_ARM_INSTRUCTION;
                   num_of_operand = 0;
                   cursor = cursor + 1'b1;
                 end
               8'b0011_0110, //istore operand
-              8'b0001_0101: // iload operand
+              8'b0001_0101, //iload operand
                 begin
                   next_state = READ_OPERAND;
                   num_of_operand = 1;
@@ -131,8 +133,8 @@ module jaa(
             if(num_of_operand == 1)
               begin
                 case(java_opcode)
-                  8'b0011_0110, // istore operand
-                  8'b0001_0101: // iload operand
+                  8'b0011_0110, //istore operand
+                  8'b0001_0101: //iload operand
                     begin
                       first_operand = data;
                     end
@@ -285,6 +287,18 @@ module jaa(
                   $display("%b", str_ldr_instruction(4'b0011, 4'b0001, first_operand, 0));
                   $display("%b", push_instruction(16'b10));
                 end
+              8'b0111_1110: //iand
+                begin
+                  $display("%b", pop_instruction(16'b110));
+                  $display("%b", and_xor_instruction(0, 1, 4'b0001, 4'b0, 12'b10));
+                  $display("%b", push_instruction(16'b0));
+                end
+              8'b1000_0010: //ixor
+                begin
+                  $display("%b", pop_instruction(16'b110));
+                  $display("%b", and_xor_instruction(0, 0, 4'b0001, 4'b0, 12'b10));
+                  $display("%b", push_instruction(16'b0));
+                end
               default:
                 begin
                   $display("Not supported. %b", java_opcode);
@@ -339,6 +353,34 @@ module jaa(
       };
     end
   endfunction
+
+  function [31:0] and_xor_instruction;
+      localparam [5:0] instruction_prefix = 6'b111000;
+      localparam [3:0] and_opcode = 4'b0000;
+      localparam [3:0] xor_opcode = 4'b0001;
+      input is_second_operand_imm, is_and;
+      input [3:0] first_operand_reg_index, dest_reg_index;
+      input [11:0] second_operand;
+      reg [3:0] opcode;
+
+      begin
+        if(is_and)
+          opcode = and_opcode;
+        else
+          begin
+            opcode = xor_opcode;
+          end
+        and_xor_instruction = {
+          instruction_prefix,
+          is_second_operand_imm,
+          opcode,
+          1'b0,
+          first_operand_reg_index,
+          dest_reg_index,
+          second_operand
+        };
+      end
+    endfunction
 
   function [31:0] mov_instruction;
     localparam [5:0] instruction_prefix = 6'b111000;
