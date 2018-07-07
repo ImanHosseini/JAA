@@ -112,7 +112,7 @@ module jaa(
                   cursor = cursor + 1'b1;
                 end
               8'b0011_0110, //istore operand
-              8'b0001_0101, //iload operand
+              8'b0001_0101: //iload operand
                 begin
                   next_state = READ_OPERAND;
                   num_of_operand = 1;
@@ -149,155 +149,231 @@ module jaa(
             $display("Opcode : %h %d", java_opcode,cursor);
             next_state = READ_OPCODE;
             num_of_operand = 0;
-            cursor = cursor;
             write_enable = 1;
+            cursor = cursor;
             case (java_opcode)
               8'b0000_0011: //iconst_0
                 begin
-                  $display("%b", mov_instruction(1, 4'b0001, 11'b0));
-                  $display("%b", push_instruction(16'b10));
+                  instructions = {
+                    push_instruction(16'b10),
+                    mov_instruction(1, 4'b0001, 11'b0)
+                  };
+                  quantity = 3'b010;
                 end
               8'b0000_0100: //iconst_1
                 begin
-                  instructions = {push_instruction(16'b10),mov_instruction(1, 4'b0001, 11'b1)};
+                  instructions = {
+                    push_instruction(16'b10),
+                    mov_instruction(1, 4'b0001, 11'b1)
+                  };
                   quantity = 3'b010;
-                  $display("%b", mov_instruction(1, 4'b0001, 11'b1));
-                  $display("%b", push_instruction(16'b10));
                 end
               8'b0000_0101: //iconst_2
                 begin
-                  $display("%b", mov_instruction(1, 4'b0001, 11'b10));
-                  $display("%b", push_instruction(16'b10));
+                  instructions = {
+                    push_instruction(16'b10),
+                    mov_instruction(1, 4'b0001, 11'b10)
+                  };
+                  quantity = 3'b010;
                 end
               8'b0000_0110: //iconst_3
                 begin
-                  $display("%b", mov_instruction(1, 4'b0001, 11'b11));
-                  $display("%b", push_instruction(16'b10));
+                  instructions = {
+                    push_instruction(16'b10),
+                    mov_instruction(1, 4'b0001, 11'b11)
+                  };
+                  quantity = 3'b010;
                 end
               8'b0000_0111: //iconst_4
                 begin
-                  $display("%b", mov_instruction(1, 4'b0001, 11'b100));
-                  $display("%b", push_instruction(16'b10));
+                  instructions = {
+                    push_instruction(16'b10),
+                    mov_instruction(1, 4'b0001, 11'b100)
+                  };
+                  quantity = 3'b010;
                 end
               8'b0000_1000: //iconst_5
                 begin
-                  $display("%b", mov_instruction(1, 4'b0001, 11'b101));
-                  $display("%b", push_instruction(16'b10));
+                  instructions = {
+                    push_instruction(16'b10),
+                    mov_instruction(1, 4'b0001, 11'b101)
+                  };
+                  quantity = 3'b010;
                 end
               8'b0011_1011: //istore_0
                 begin
-                  $display("%b", pop_instruction(16'b1));
-                  $display("%b", str_ldr_instruction(4'b0011, 4'b0001, 12'b0, 1));
+                  instructions = {
+                    str_ldr_instruction(4'b0011, 4'b0001, 12'b0, 1),
+                    pop_instruction(16'b1)
+                  };
+                  quantity = 3'b010;
                 end
               8'b0011_1100: //istore_1
                 begin
-                  $display("%b", pop_instruction(16'b1));
-                  $display("%b", str_ldr_instruction(4'b0011, 4'b0001, 12'b1, 1));
+                  instructions = {
+                    str_ldr_instruction(4'b0011, 4'b0001, 12'b1, 1),
+                    pop_instruction(16'b1)
+                  };
+                  quantity = 3'b010;
                 end
               8'b0011_1101: //istore_2
                 begin
-                  $display("%b", pop_instruction(16'b1));
-                  $display("%b", str_ldr_instruction(4'b0011, 4'b0001, 12'b10, 1));
+                  instructions = {
+                    str_ldr_instruction(4'b0011, 4'b0001, 12'b10, 1),
+                    pop_instruction(16'b1)
+                  };
+                  quantity = 3'b010;
                 end
               8'b0011_1110: //istore_3
                 begin
-                  $display("%b", pop_instruction(16'b1));
-                  $display("%b", str_ldr_instruction(4'b0011, 4'b0001, 12'b11, 1));
+                  instructions = {
+                    str_ldr_instruction(4'b0011, 4'b0001, 12'b11, 1),
+                    pop_instruction(16'b1)
+                  };
+                  quantity = 3'b010;
                 end
               8'b0001_1010: //iload_0
                 begin
-                  $display("%b", str_ldr_instruction(4'b0011, 4'b0001, 12'b0, 0));
-                  $display("%b", push_instruction(16'b10));
+                  instructions = {
+                    push_instruction(16'b10),
+                    str_ldr_instruction(4'b0011, 4'b0001, 12'b0, 0)
+                  };
+                  quantity = 3'b010;
                 end
               8'b0001_1011: //iload_1
                 begin
-                  $display("%b", str_ldr_instruction(4'b0011, 4'b0001, 12'b1, 0));
-                  $display("%b", push_instruction(16'b10));
+                  instructions = {
+                    push_instruction(16'b10),
+                    str_ldr_instruction(4'b0011, 4'b0001, 12'b1, 0)
+                  };
+                  quantity = 3'b010;
                 end
               8'b0001_1100: //iload_2
                 begin
-                  $display("%b", str_ldr_instruction(4'b0011, 4'b0001, 12'b10, 0));
-                  $display("%b", push_instruction(16'b10));
+                  instructions = {
+                    push_instruction(16'b10),
+                    str_ldr_instruction(4'b0011, 4'b0001, 12'b10, 0)
+                  };
+                  quantity = 3'b010;
                 end
               8'b0001_1101: //iload_3
                 begin
-                  $display("%b", str_ldr_instruction(4'b0011, 4'b0001, 12'b11, 0));
-                  $display("%b", push_instruction(16'b10));
+                  instructions = {
+                    push_instruction(16'b10),
+                    str_ldr_instruction(4'b0011, 4'b0001, 12'b11, 0)
+                  };
+                  quantity = 3'b010;
                 end
               8'b0110_0000: //iadd
                 begin
-                  $display("%b", pop_instruction(16'b110));
-                  $display("%b", add_sub_instruction(0, 1, 4'b0001, 4'b0, 12'b10));
+                  instructions = {
+                    add_sub_instruction(0, 1, 4'b0001, 4'b0, 12'b10),
+                    pop_instruction(16'b110)
+                  };
+                  quantity = 3'b010;
                 end
               8'b0101_1001: //dup
                 begin
-                  $display("%b", pop_instruction(16'b1));
-                  $display("%b", push_instruction(16'b1));
-                  $display("%b", push_instruction(16'b10));
+                  instructions = {
+                    push_instruction(16'b10),
+                    push_instruction(16'b1),
+                    pop_instruction(16'b1)
+                  };
+                  quantity = 3'b011;
                 end
               8'b0101_1010: //dup_x1
                 begin
-                  $display("%b", pop_instruction(16'b11));
-                  $display("%b", push_instruction(16'b10));
-                  $display("%b", push_instruction(16'b11));
+                  instructions = {
+                    push_instruction(16'b11),
+                    push_instruction(16'b10),
+                    pop_instruction(16'b11)
+                  };
+                  quantity = 3'b011;
                 end
               8'b0101_1011: //dup_x2
                 begin
-                  $display("%b", pop_instruction(16'b111));
-                  $display("%b", push_instruction(16'b100));
-                  $display("%b", push_instruction(16'b10));
-                  $display("%b", push_instruction(16'b101));
+                  instructions = {
+                    push_instruction(16'b101),
+                    push_instruction(16'b10),
+                    push_instruction(16'b100),
+                    pop_instruction(16'b111)
+                  };
+                  quantity = 3'b110;
                 end
               8'b0101_1100: //dup2
                 begin
-                  $display("%b", pop_instruction(16'b11));
-                  $display("%b", push_instruction(16'b10));
-                  $display("%b", push_instruction(16'b11));
-                  $display("%b", push_instruction(16'b1));
+                  instructions = {
+                    push_instruction(16'b1),
+                    push_instruction(16'b11),
+                    push_instruction(16'b10),
+                    pop_instruction(16'b11)
+                  };
+                  quantity = 3'b110;
                 end
               8'b0101_1101: //dup2_x1
                 begin
-                  $display("%b", pop_instruction(16'b111));
-                  $display("%b", push_instruction(16'b100));
-                  $display("%b", push_instruction(16'b10));
-                  $display("%b", push_instruction(16'b101));
-                  $display("%b", push_instruction(16'b10));
+                  instructions = {
+                    push_instruction(16'b10),
+                    push_instruction(16'b101),
+                    push_instruction(16'b10),
+                    push_instruction(16'b100),
+                    pop_instruction(16'b111)
+                  };
+                  quantity = 3'b101;
                 end
               8'b0101_1110: //dup2_x2
                 begin
-                  $display("%b", pop_instruction(16'b1111));
-                  $display("%b", push_instruction(16'b1000));
-                  $display("%b", push_instruction(16'b100));
-                  $display("%b", push_instruction(16'b10));
-                  $display("%b", push_instruction(16'b1001));
-                  $display("%b", push_instruction(16'b100));
+                  instructions = {
+                    push_instruction(16'b100),
+                    push_instruction(16'b1001),
+                    push_instruction(16'b10),
+                    push_instruction(16'b100),
+                    push_instruction(16'b1000),
+                    pop_instruction(16'b1111)
+                  };
+                  quantity = 3'b110;
                 end
               8'b0101_1111: // swap
                 begin
-                  $display("%b", pop_instruction(16'b11));
-                  $display("%b", push_instruction(16'b11));
+                  instructions = {
+                    push_instruction(16'b11),
+                    pop_instruction(16'b11)
+                  };
+                  quantity = 3'b010;
                 end
               8'b0011_0110: // istore operand
                 begin
-                  $display("%b", pop_instruction(16'b10));
-                  $display("%b", str_ldr_instruction(4'b0011, 4'b0001, first_operand, 1));
+                  instructions = {
+                    str_ldr_instruction(4'b0011, 4'b0001, first_operand, 1),
+                    pop_instruction(16'b10)
+                  };
+                  quantity = 3'b010;
                 end
               8'b0001_0101: // iload operand
                 begin
-                  $display("%b", str_ldr_instruction(4'b0011, 4'b0001, first_operand, 0));
-                  $display("%b", push_instruction(16'b10));
+                  instructions = {
+                    push_instruction(16'b10),
+                    str_ldr_instruction(4'b0011, 4'b0001, first_operand, 0)
+                  };
+                  quantity = 3'b010;
                 end
               8'b0111_1110: //iand
                 begin
-                  $display("%b", pop_instruction(16'b110));
-                  $display("%b", and_xor_instruction(0, 1, 4'b0001, 4'b0, 12'b10));
-                  $display("%b", push_instruction(16'b0));
+                  instructions = {
+                    push_instruction(16'b0),
+                    and_xor_instruction(0, 1, 4'b0001, 4'b0, 12'b10),
+                    pop_instruction(16'b110)
+                  };
+                  quantity = 3'b011;
                 end
               8'b1000_0010: //ixor
                 begin
-                  $display("%b", pop_instruction(16'b110));
-                  $display("%b", and_xor_instruction(0, 0, 4'b0001, 4'b0, 12'b10));
-                  $display("%b", push_instruction(16'b0));
+                  instructions = {
+                    push_instruction(16'b0),
+                    and_xor_instruction(0, 0, 4'b0001, 4'b0, 12'b10),
+                    pop_instruction(16'b110)
+                  };
+                  quantity = 3'b011;
                 end
               default:
                 begin
