@@ -1,0 +1,68 @@
+dup 0x59:
+	pop {r0}
+	push {r0}
+	push {r1}
+	
+dup_x1 0x5a:
+	pop {r0,r1}
+	push {r1}
+	push {r0,r1}
+	
+dup_x2 0x5b:
+	pop {r0,r1,r2}
+	push {r2}
+	push {r1}
+	push {r0,r2}
+	
+dup2 0x5c:
+	pop {r0,r1}
+	push {r1}
+	push {r0,r1}
+	push {r0}
+	
+dup2_x1 0x5d:
+	pop {r0,r1,r2}
+	push {r2}
+	push {r1}
+	push {r0,r2}
+	push {r1}
+	
+dup2_x2 0x5e:
+	pop {r0,r1,r2,r3}
+	push {r3}
+	push {r2}
+	push {r1}
+	push {r0,r3}
+	push {r2}
+	
+istore op:
+	pop{r1}
+	str r1,[r3,#op]
+	
+swap 0x5f:
+	pop {r0,r1}
+	push {r0,r1}
+
+0x84 iinc index const:
+	# has two operands: index, const each is 1 byte
+	# treat const as an immediate int
+	ldr r1,[r3,#index]
+	mov r2,#const
+	add r0,r1,r2
+	str r0,[r3,#index]
+
+0x10 bipush op:
+	# pushes operand to stack
+	# operand is 1 byte, treated as integer value
+	mov r1,#op
+	push {r1}
+
+0x11 sipush op1 op2:
+	# ! NOT POSSIBLE YET !
+	# pushes operand to stack
+	# operand is a short 
+	# thus 2 bytes, treated as integer value
+	# make the two bytes into a value op
+	mov r1,#op
+	push {r1}
+	
