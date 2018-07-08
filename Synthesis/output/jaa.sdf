@@ -1,0 +1,3755 @@
+(DELAYFILE
+(SDFVERSION "OVI 2.1")
+(DESIGN "jaa")
+(DATE "Sun Jul  8 12:33:13 2018")
+(VENDOR "typical")
+(PROGRAM "Synopsys Design Compiler cmos")
+(VERSION "C-2009.06-SP5")
+(DIVIDER /)
+(VOLTAGE 1.80:1.80:1.80)
+(PROCESS "typical")
+(TEMPERATURE 25.00:25.00:25.00)
+(TIMESCALE 1ns)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE quantity_reg\[3\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE quantity_reg\[1\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE quantity_reg\[0\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE quantity_reg\[2\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[191\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[190\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[189\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[188\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[187\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[186\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[185\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[184\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[183\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[182\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[181\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[180\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[179\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[178\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[177\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[176\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[175\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[174\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[173\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[172\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[171\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[170\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[169\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[168\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[167\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[166\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[165\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[164\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[163\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[162\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[161\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[160\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[159\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[158\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[157\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[156\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[155\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[154\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[153\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[152\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[151\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[150\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[149\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[148\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[147\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[146\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[145\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[144\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[143\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[142\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[141\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[140\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[139\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[138\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[137\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[136\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[135\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[134\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[133\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[132\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[131\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[130\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[129\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[128\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[127\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[126\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[125\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[124\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[123\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[122\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[121\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[120\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[119\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[118\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[117\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[116\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[115\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[114\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[113\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[112\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[111\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[110\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[109\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[108\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[107\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[106\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[105\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[104\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[103\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[102\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[101\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[100\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[99\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[98\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[97\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[96\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[95\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[94\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[93\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[92\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[91\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[90\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[89\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[88\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[87\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[86\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[85\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[84\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[83\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[82\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[81\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[80\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[79\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[78\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[77\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[76\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[75\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[74\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[73\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[72\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[71\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[70\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[69\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[68\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[67\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[66\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[65\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[64\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[63\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[62\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[61\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[60\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[59\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[58\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[57\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[56\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[55\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[54\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[53\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[52\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[51\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[50\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[49\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[48\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[47\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[46\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[45\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[44\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[43\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[42\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[41\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[40\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[39\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[38\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[37\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[36\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[35\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[34\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[33\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[32\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[31\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[30\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[29\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[28\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[27\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[26\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[25\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[24\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[23\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[22\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[21\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[20\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[19\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[18\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[17\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[16\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[15\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[14\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[13\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[12\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[11\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[10\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[9\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[8\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[7\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[6\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[5\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[4\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[3\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[2\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE instructions_reg\[1\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "TLATX4")
+  (INSTANCE write_enable_reg)
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge G) Q (0.154:0.154:0.154) (0.120:0.120:0.120))
+    (IOPATH D Q (0.069:0.069:0.069) (0.109:0.109:0.109))
+    (IOPATH (posedge G) QN (0.208:0.208:0.208) (0.233:0.233:0.233))
+    (IOPATH D QN (0.199:0.199:0.199) (0.149:0.149:0.149))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge G) (0.080:0.080:0.080))
+    (SETUP (posedge D) (negedge G) (-0.021:-0.021:-0.021))
+    (SETUP (negedge D) (negedge G) (0.079:0.079:0.079))
+    (HOLD (posedge D) (negedge G) (0.033:0.033:0.033))
+    (HOLD (negedge D) (negedge G) (-0.077:-0.077:-0.077))
+  )
+)
+(CELL
+  (CELLTYPE "RSLATX1")
+  (INSTANCE instructions_reg\[0\])
+  (DELAY
+    (ABSOLUTE
+    (IOPATH R Q (0.149:0.149:0.149) (0.128:0.128:0.128))
+    (IOPATH (posedge S) Q (0.211:0.211:0.211) ())
+    (IOPATH (posedge R) QN (0.214:0.214:0.214) ())
+    (IOPATH S QN (0.139:0.139:0.139) (0.120:0.120:0.120))
+    )
+  )
+  (TIMINGCHECK
+    (WIDTH (posedge R) (0.109:0.109:0.109))
+    (HOLD (negedge S) (negedge R) (0.109:0.109:0.109))
+    (WIDTH (posedge S) (0.109:0.109:0.109))
+    (HOLD (negedge R) (negedge S) (0.109:0.109:0.109))
+  )
+)
+)

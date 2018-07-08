@@ -1,0 +1,27 @@
+*SPEF "IEEE 1481-1999"
+*DESIGN "jaa"
+*DATE "Sun Jul  8 12:33:13 2018"
+*VENDOR "SYNOPSYS INC"
+*PROGRAM "Synopsys Design Compiler cmos"
+*VERSION "C-2009.06-SP5"
+*DESIGN_FLOW "SYNTHESIS"
+*DIVIDER /
+*DELIMITER :
+*BUS_DELIMITER []
+*T_UNIT 1.0 NS
+*C_UNIT 1.0 PF
+*R_UNIT 1.0 KOHM
+*L_UNIT 1.0 HENRY
+
+*PORTS
+
+clk I *L 0.000e+00 *S 0.000e+00 0.000e+00 
+reset I *L 0.000e+00 *S 0.000e+00 0.000e+00 
+data\[7\] O *L 0.000e+00 *S 0.000e+00 0.000e+00 
+data\[6\] O *L 0.000e+00 *S 0.000e+00 0.000e+00 
+data\[5\] O *L 0.000e+00 *S 0.000e+00 0.000e+00 
+data\[4\] O *L 0.000e+00 *S 0.000e+00 0.000e+00 
+data\[3\] O *L 0.000e+00 *S 0.000e+00 0.000e+00 
+data\[2\] O *L 0.000e+00 *S 0.000e+00 0.000e+00 
+data\[1\] O *L 0.000e+00 *S 0.000e+00 0.000e+00 
+data\[0\] O *L 0.000e+00 *S 0.000e+00 0.000e+00 
