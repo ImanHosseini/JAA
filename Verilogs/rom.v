@@ -4,7 +4,7 @@ module rom (
   output reg [7:0] data
 );
 
-  assign size = 50;
+  assign size = 49;
 
   always @ (address)
     begin

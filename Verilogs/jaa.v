@@ -53,7 +53,7 @@ module jaa(
       if(reset)
         state <= START;
       else
-        if (cursor < size)
+        if (cursor <= size)
           begin
             state <= next_state;
             cursor <= next_cursor;
