@@ -1,0 +1,220 @@
+Warning: Design 'jaa' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : cell
+Design : jaa
+Version: C-2009.06-SP5
+Date   : Sun Jul  8 12:33:12 2018
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+   so - sizing only
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+instructions_reg[0]       RSLATX1         typical         33.264000 n, so
+instructions_reg[1]       TLATX4          typical         56.548801 n, so
+instructions_reg[2]       TLATX4          typical         56.548801 n, so
+instructions_reg[3]       TLATX4          typical         56.548801 n, so
+instructions_reg[4]       TLATX4          typical         56.548801 n, so
+instructions_reg[5]       TLATX4          typical         56.548801 n, so
+instructions_reg[6]       TLATX4          typical         56.548801 n, so
+instructions_reg[7]       TLATX4          typical         56.548801 n, so
+instructions_reg[8]       TLATX4          typical         56.548801 n, so
+instructions_reg[9]       TLATX4          typical         56.548801 n, so
+instructions_reg[10]      TLATX4          typical         56.548801 n, so
+instructions_reg[11]      TLATX4          typical         56.548801 n, so
+instructions_reg[12]      TLATX4          typical         56.548801 n, so
+instructions_reg[13]      TLATX4          typical         56.548801 n, so
+instructions_reg[14]      TLATX4          typical         56.548801 n, so
+instructions_reg[15]      TLATX4          typical         56.548801 n, so
+instructions_reg[16]      TLATX4          typical         56.548801 n, so
+instructions_reg[17]      TLATX4          typical         56.548801 n, so
+instructions_reg[18]      TLATX4          typical         56.548801 n, so
+instructions_reg[19]      TLATX4          typical         56.548801 n, so
+instructions_reg[20]      TLATX4          typical         56.548801 n, so
+instructions_reg[21]      TLATX4          typical         56.548801 n, so
+instructions_reg[22]      TLATX4          typical         56.548801 n, so
+instructions_reg[23]      TLATX4          typical         56.548801 n, so
+instructions_reg[24]      TLATX4          typical         56.548801 n, so
+instructions_reg[25]      TLATX4          typical         56.548801 n, so
+instructions_reg[26]      TLATX4          typical         56.548801 n, so
+instructions_reg[27]      TLATX4          typical         56.548801 n, so
+instructions_reg[28]      TLATX4          typical         56.548801 n, so
+instructions_reg[29]      TLATX4          typical         56.548801 n, so
+instructions_reg[30]      TLATX4          typical         56.548801 n, so
+instructions_reg[31]      TLATX4          typical         56.548801 n, so
+instructions_reg[32]      TLATX4          typical         56.548801 n, so
+instructions_reg[33]      TLATX4          typical         56.548801 n, so
+instructions_reg[34]      TLATX4          typical         56.548801 n, so
+instructions_reg[35]      TLATX4          typical         56.548801 n, so
+instructions_reg[36]      TLATX4          typical         56.548801 n, so
+instructions_reg[37]      TLATX4          typical         56.548801 n, so
+instructions_reg[38]      TLATX4          typical         56.548801 n, so
+instructions_reg[39]      TLATX4          typical         56.548801 n, so
+instructions_reg[40]      TLATX4          typical         56.548801 n, so
+instructions_reg[41]      TLATX4          typical         56.548801 n, so
+instructions_reg[42]      TLATX4          typical         56.548801 n, so
+instructions_reg[43]      TLATX4          typical         56.548801 n, so
+instructions_reg[44]      TLATX4          typical         56.548801 n, so
+instructions_reg[45]      TLATX4          typical         56.548801 n, so
+instructions_reg[46]      TLATX4          typical         56.548801 n, so
+instructions_reg[47]      TLATX4          typical         56.548801 n, so
+instructions_reg[48]      TLATX4          typical         56.548801 n, so
+instructions_reg[49]      TLATX4          typical         56.548801 n, so
+instructions_reg[50]      TLATX4          typical         56.548801 n, so
+instructions_reg[51]      TLATX4          typical         56.548801 n, so
+instructions_reg[52]      TLATX4          typical         56.548801 n, so
+instructions_reg[53]      TLATX4          typical         56.548801 n, so
+instructions_reg[54]      TLATX4          typical         56.548801 n, so
+instructions_reg[55]      TLATX4          typical         56.548801 n, so
+instructions_reg[56]      TLATX4          typical         56.548801 n, so
+instructions_reg[57]      TLATX4          typical         56.548801 n, so
+instructions_reg[58]      TLATX4          typical         56.548801 n, so
+instructions_reg[59]      TLATX4          typical         56.548801 n, so
+instructions_reg[60]      TLATX4          typical         56.548801 n, so
+instructions_reg[61]      TLATX4          typical         56.548801 n, so
+instructions_reg[62]      TLATX4          typical         56.548801 n, so
+instructions_reg[63]      TLATX4          typical         56.548801 n, so
+instructions_reg[64]      TLATX4          typical         56.548801 n, so
+instructions_reg[65]      TLATX4          typical         56.548801 n, so
+instructions_reg[66]      TLATX4          typical         56.548801 n, so
+instructions_reg[67]      TLATX4          typical         56.548801 n, so
+instructions_reg[68]      TLATX4          typical         56.548801 n, so
+instructions_reg[69]      TLATX4          typical         56.548801 n, so
+instructions_reg[70]      TLATX4          typical         56.548801 n, so
+instructions_reg[71]      TLATX4          typical         56.548801 n, so
+instructions_reg[72]      TLATX4          typical         56.548801 n, so
+instructions_reg[73]      TLATX4          typical         56.548801 n, so
+instructions_reg[74]      TLATX4          typical         56.548801 n, so
+instructions_reg[75]      TLATX4          typical         56.548801 n, so
+instructions_reg[76]      TLATX4          typical         56.548801 n, so
+instructions_reg[77]      TLATX4          typical         56.548801 n, so
+instructions_reg[78]      TLATX4          typical         56.548801 n, so
+instructions_reg[79]      TLATX4          typical         56.548801 n, so
+instructions_reg[80]      TLATX4          typical         56.548801 n, so
+instructions_reg[81]      TLATX4          typical         56.548801 n, so
+instructions_reg[82]      TLATX4          typical         56.548801 n, so
+instructions_reg[83]      TLATX4          typical         56.548801 n, so
+instructions_reg[84]      TLATX4          typical         56.548801 n, so
+instructions_reg[85]      TLATX4          typical         56.548801 n, so
+instructions_reg[86]      TLATX4          typical         56.548801 n, so
+instructions_reg[87]      TLATX4          typical         56.548801 n, so
+instructions_reg[88]      TLATX4          typical         56.548801 n, so
+instructions_reg[89]      TLATX4          typical         56.548801 n, so
+instructions_reg[90]      TLATX4          typical         56.548801 n, so
+instructions_reg[91]      TLATX4          typical         56.548801 n, so
+instructions_reg[92]      TLATX4          typical         56.548801 n, so
+instructions_reg[93]      TLATX4          typical         56.548801 n, so
+instructions_reg[94]      TLATX4          typical         56.548801 n, so
+instructions_reg[95]      TLATX4          typical         56.548801 n, so
+instructions_reg[96]      TLATX4          typical         56.548801 n, so
+instructions_reg[97]      TLATX4          typical         56.548801 n, so
+instructions_reg[98]      TLATX4          typical         56.548801 n, so
+instructions_reg[99]      TLATX4          typical         56.548801 n, so
+instructions_reg[100]     TLATX4          typical         56.548801 n, so
+instructions_reg[101]     TLATX4          typical         56.548801 n, so
+instructions_reg[102]     TLATX4          typical         56.548801 n, so
+instructions_reg[103]     TLATX4          typical         56.548801 n, so
+instructions_reg[104]     TLATX4          typical         56.548801 n, so
+instructions_reg[105]     TLATX4          typical         56.548801 n, so
+instructions_reg[106]     TLATX4          typical         56.548801 n, so
+instructions_reg[107]     TLATX4          typical         56.548801 n, so
+instructions_reg[108]     TLATX4          typical         56.548801 n, so
+instructions_reg[109]     TLATX4          typical         56.548801 n, so
+instructions_reg[110]     TLATX4          typical         56.548801 n, so
+instructions_reg[111]     TLATX4          typical         56.548801 n, so
+instructions_reg[112]     TLATX4          typical         56.548801 n, so
+instructions_reg[113]     TLATX4          typical         56.548801 n, so
+instructions_reg[114]     TLATX4          typical         56.548801 n, so
+instructions_reg[115]     TLATX4          typical         56.548801 n, so
+instructions_reg[116]     TLATX4          typical         56.548801 n, so
+instructions_reg[117]     TLATX4          typical         56.548801 n, so
+instructions_reg[118]     TLATX4          typical         56.548801 n, so
+instructions_reg[119]     TLATX4          typical         56.548801 n, so
+instructions_reg[120]     TLATX4          typical         56.548801 n, so
+instructions_reg[121]     TLATX4          typical         56.548801 n, so
+instructions_reg[122]     TLATX4          typical         56.548801 n, so
+instructions_reg[123]     TLATX4          typical         56.548801 n, so
+instructions_reg[124]     TLATX4          typical         56.548801 n, so
+instructions_reg[125]     TLATX4          typical         56.548801 n, so
+instructions_reg[126]     TLATX4          typical         56.548801 n, so
+instructions_reg[127]     TLATX4          typical         56.548801 n, so
+instructions_reg[128]     TLATX4          typical         56.548801 n, so
+instructions_reg[129]     TLATX4          typical         56.548801 n, so
+instructions_reg[130]     TLATX4          typical         56.548801 n, so
+instructions_reg[131]     TLATX4          typical         56.548801 n, so
+instructions_reg[132]     TLATX4          typical         56.548801 n, so
+instructions_reg[133]     TLATX4          typical         56.548801 n, so
+instructions_reg[134]     TLATX4          typical         56.548801 n, so
+instructions_reg[135]     TLATX4          typical         56.548801 n, so
+instructions_reg[136]     TLATX4          typical         56.548801 n, so
+instructions_reg[137]     TLATX4          typical         56.548801 n, so
+instructions_reg[138]     TLATX4          typical         56.548801 n, so
+instructions_reg[139]     TLATX4          typical         56.548801 n, so
+instructions_reg[140]     TLATX4          typical         56.548801 n, so
+instructions_reg[141]     TLATX4          typical         56.548801 n, so
+instructions_reg[142]     TLATX4          typical         56.548801 n, so
+instructions_reg[143]     TLATX4          typical         56.548801 n, so
+instructions_reg[144]     TLATX4          typical         56.548801 n, so
+instructions_reg[145]     TLATX4          typical         56.548801 n, so
+instructions_reg[146]     TLATX4          typical         56.548801 n, so
+instructions_reg[147]     TLATX4          typical         56.548801 n, so
+instructions_reg[148]     TLATX4          typical         56.548801 n, so
+instructions_reg[149]     TLATX4          typical         56.548801 n, so
+instructions_reg[150]     TLATX4          typical         56.548801 n, so
+instructions_reg[151]     TLATX4          typical         56.548801 n, so
+instructions_reg[152]     TLATX4          typical         56.548801 n, so
+instructions_reg[153]     TLATX4          typical         56.548801 n, so
+instructions_reg[154]     TLATX4          typical         56.548801 n, so
+instructions_reg[155]     TLATX4          typical         56.548801 n, so
+instructions_reg[156]     TLATX4          typical         56.548801 n, so
+instructions_reg[157]     TLATX4          typical         56.548801 n, so
+instructions_reg[158]     TLATX4          typical         56.548801 n, so
+instructions_reg[159]     TLATX4          typical         56.548801 n, so
+instructions_reg[160]     TLATX4          typical         56.548801 n, so
+instructions_reg[161]     TLATX4          typical         56.548801 n, so
+instructions_reg[162]     TLATX4          typical         56.548801 n, so
+instructions_reg[163]     TLATX4          typical         56.548801 n, so
+instructions_reg[164]     TLATX4          typical         56.548801 n, so
+instructions_reg[165]     TLATX4          typical         56.548801 n, so
+instructions_reg[166]     TLATX4          typical         56.548801 n, so
+instructions_reg[167]     TLATX4          typical         56.548801 n, so
+instructions_reg[168]     TLATX4          typical         56.548801 n, so
+instructions_reg[169]     TLATX4          typical         56.548801 n, so
+instructions_reg[170]     TLATX4          typical         56.548801 n, so
+instructions_reg[171]     TLATX4          typical         56.548801 n, so
+instructions_reg[172]     TLATX4          typical         56.548801 n, so
+instructions_reg[173]     TLATX4          typical         56.548801 n, so
+instructions_reg[174]     TLATX4          typical         56.548801 n, so
+instructions_reg[175]     TLATX4          typical         56.548801 n, so
+instructions_reg[176]     TLATX4          typical         56.548801 n, so
+instructions_reg[177]     TLATX4          typical         56.548801 n, so
+instructions_reg[178]     TLATX4          typical         56.548801 n, so
+instructions_reg[179]     TLATX4          typical         56.548801 n, so
+instructions_reg[180]     TLATX4          typical         56.548801 n, so
+instructions_reg[181]     TLATX4          typical         56.548801 n, so
+instructions_reg[182]     TLATX4          typical         56.548801 n, so
+instructions_reg[183]     TLATX4          typical         56.548801 n, so
+instructions_reg[184]     TLATX4          typical         56.548801 n, so
+instructions_reg[185]     TLATX4          typical         56.548801 n, so
+instructions_reg[186]     TLATX4          typical         56.548801 n, so
+instructions_reg[187]     TLATX4          typical         56.548801 n, so
+instructions_reg[188]     TLATX4          typical         56.548801 n, so
+instructions_reg[189]     TLATX4          typical         56.548801 n, so
+instructions_reg[190]     TLATX4          typical         56.548801 n, so
+instructions_reg[191]     TLATX4          typical         56.548801 n, so
+quantity_reg[0]           TLATX4          typical         56.548801 n, so
+quantity_reg[1]           TLATX4          typical         56.548801 n, so
+quantity_reg[2]           TLATX4          typical         56.548801 n, so
+quantity_reg[3]           TLATX4          typical         56.548801 n, so
+write_enable_reg          TLATX4          typical         56.548801 n, so
+--------------------------------------------------------------------------------
+Total 197 cells                                           11116.829079
+1

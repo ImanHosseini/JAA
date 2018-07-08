@@ -1,0 +1,25 @@
+Warning: Design 'jaa' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : area
+Design : jaa
+Version: C-2009.06-SP5
+Date   : Sun Jul  8 12:33:12 2018
+****************************************
+
+Library(s) Used:
+
+    typical (File: /home/icic/Desktop/DSDFINAL/library/typical.db)
+
+Number of ports:               10
+Number of nets:                14
+Number of cells:              197
+Number of references:           2
+
+Combinational area:          0.000000
+Noncombinational area:    11116.829079
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:          11116.829079
+Total area:                 undefined
+1

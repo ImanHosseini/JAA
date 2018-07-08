@@ -1,0 +1,118 @@
+Loading verilog files: '/home/icic/Desktop/DSDFINAL/verilog_source_code/jaa.v' '/home/icic/Desktop/DSDFINAL/verilog_source_code/jaa_tb.v' '/home/icic/Desktop/DSDFINAL/verilog_source_code/memory_writer.v'
+Detecting input file type automatically (-rtl or -netlist).
+Running DC verilog reader
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/icic/Desktop/DSDFINAL/verilog_source_code/jaa.v
+$display output: Not supported. ???????? ?
+$display output: Opcode : ?? ?
+$display output: 11100011101000000001000000000000
+$display output: 11101001001011010000000000000010
+$display output: 11100011101000000001000000000001
+$display output: 11101001001011010000000000000010
+$display output: 11100011101000000001000000000010
+$display output: 11101001001011010000000000000010
+$display output: 11100011101000000001000000000011
+$display output: 11101001001011010000000000000010
+$display output: 11100011101000000001000000000100
+$display output: 11101001001011010000000000000010
+$display output: 11100011101000000001000000000101
+$display output: 11101001001011010000000000000010
+$display output: 11101000101111010000000000000001
+$display output: 11100101100000010011000000000000
+$display output: 11101000101111010000000000000001
+$display output: 11100101100000010011000000000001
+$display output: 11101000101111010000000000000001
+$display output: 11100101100000010011000000000010
+$display output: 11101000101111010000000000000001
+$display output: 11100101100000010011000000000011
+$display output: 11100101100100010011000000000000
+$display output: 11101001001011010000000000000010
+$display output: 11100101100100010011000000000001
+$display output: 11101001001011010000000000000010
+$display output: 11100101100100010011000000000010
+$display output: 11101001001011010000000000000010
+$display output: 11100101100100010011000000000011
+$display output: 11101001001011010000000000000010
+$display output: 11101000101111010000000000000110
+$display output: 11100000100000010000000000000010
+$display output: 11101000101111010000000000000001
+$display output: 11101001001011010000000000000001
+$display output: 11101001001011010000000000000010
+$display output: 11101000101111010000000000000011
+$display output: 11101001001011010000000000000010
+$display output: 11101001001011010000000000000011
+$display output: 11101000101111010000000000000111
+$display output: 11101001001011010000000000000100
+$display output: 11101001001011010000000000000010
+$display output: 11101001001011010000000000000101
+$display output: 11101000101111010000000000000011
+$display output: 11101001001011010000000000000010
+$display output: 11101001001011010000000000000011
+$display output: 11101001001011010000000000000001
+$display output: 11101000101111010000000000000111
+$display output: 11101001001011010000000000000100
+$display output: 11101001001011010000000000000010
+$display output: 11101001001011010000000000000101
+$display output: 11101001001011010000000000000010
+$display output: 11101000101111010000000000001111
+$display output: 11101001001011010000000000001000
+$display output: 11101001001011010000000000000100
+$display output: 11101001001011010000000000000010
+$display output: 11101001001011010000000000001001
+$display output: 11101001001011010000000000000100
+$display output: 11101000101111010000000000000011
+$display output: 11101001001011010000000000000011
+$display output: 11101000101111010000000000000010
+$display output: 111001011000000100110000????????
+$display output: 111001011001000100110000????????
+$display output: 11101001001011010000000000000010
+$display output: 11101000101111010000000000000110
+$display output: 11100000000000010000000000000010
+$display output: 11101001001011010000000000000000
+$display output: 11101000101111010000000000000110
+$display output: 11100000001000010000000000000010
+$display output: 11101001001011010000000000000000
+$display output: Not supported. ????????
+
+Statistics for case statements in always block at line 66 in file
+        '/home/icic/Desktop/DSDFINAL/verilog_source_code/jaa.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            68            |     no/auto      |
+|            80            |    auto/auto     |
+|           131            |     no/auto      |
+|           150            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine jaa line 57 in file
+                '/home/icic/Desktop/DSDFINAL/verilog_source_code/jaa.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+|      data_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine jaa line 66 in file
+                '/home/icic/Desktop/DSDFINAL/verilog_source_code/jaa.v'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|   next_state_reg    | Latch |   3   |  Y  | N  | N  | N  | -  | -  | -  |
+|    quantity_reg     | Latch |   4   |  Y  | N  | N  | N  | -  | -  | -  |
+|     cursor_reg      | Latch |  10   |  Y  | N  | N  | N  | -  | -  | -  |
+|  instructions_reg   | Latch |  192  |  Y  | N  | N  | N  | -  | -  | -  |
+|   java_opcode_reg   | Latch |   8   |  Y  | N  | N  | N  | -  | -  | -  |
+|  write_enable_reg   | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+| num_of_operand_reg  | Latch |   2   |  Y  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Statistics for MUX_OPs
+===========================================================
+| block name/line  | Inputs | Outputs | # sel inputs | MB |
+===========================================================
+|      jaa/59      |  1024  |    1    |      10      | N  |
+===========================================================
